@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>contact</title>  
+  
+<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="" style="background: linear-gradient(to top,#ff82f7,#2d8dfb);">
+<div id="site-border-left" style="background: none;"></div>
+<div id="site-border-right" style="background: none;"></div>
+<div id="site-border-top" style="background: none;"></div>
+<div id="site-border-bottom" style="background: none;"></div>
+
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default" style="position: relative; margin-bottom: 1px; background: none;">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse" style="box-shadow: 1px 1px 1px 1px; color: #8dbaed; padding: 15px 0px;">
+        <ul class="nav navbar-nav ">
+          <li><a href="./index.html" title="" style="color: white;"> Home</a></li>
+          <li><a href="./works.html" title="" style="color: white;"> Projects</a></li>
+          <li><a href="./about.html" title="" style="color: white;"> About me</a></li>
+          <li><a href="./contact.html" title="" style="color: white;"> Contact</a></li>
+          <li><a href="./components.html" title="" style="color: white;"> Network</a></li>
+        </ul>
+
+
+      </div> 
+    </div>
+  </nav>
+</header>
+
+<div class="section-container" style="padding: 30px 0px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2" style="color: white;">Contact me</h1>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+               <form action="mailto:shahriernobel4@gmail.com" class="reveal-content" method="post" >
+                  <div class="row">
+                    <section class="text-gray-600 body-font relative">
+                      <div class="absolute inset-0 bg-gray-300">
+                        <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.5832856968814!2d90.39008467372967!3d23.726570789693902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dd4855f073%3A0x27aa71bcab92ae5a!2sBangladesh%20University%20of%20Engineering%20and%20Technology%20(BUET)!5e0!3m2!1sen!2sbd!4v1689325002880!5m2!1sen!2sbd" style="filter:contrast(1) opacity(0.6);"></iframe>
+                      </div>
+                      <div id="contact-form-container"></div>
+
+                      <div class="container px-5 py-24 mx-auto flex">
+  <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+    <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contact</h2>
+    <p class="leading-relaxed mb-5 text-gray-600">Contact to place an order or any other queries</p>
+    <div class="relative mb-4">
+      <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+      <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+    </div>
+    <div class="relative mb-4">
+      <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+      <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+    </div>
+    <button id="send-button" class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">SEND</button>
+    <p id="status-message" class="text-xs text-gray-500 mt-3"></p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sendButton = document.getElementById('send-button');
+    var emailInput = document.getElementById('email');
+    var messageInput = document.getElementById('message');
+    var statusMessage = document.getElementById('status-message');
+
+    sendButton.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      var email = emailInput.value;
+      var message = messageInput.value;
+
+      // Construct the email message
+      var subject = "New Message from Contact Form";
+      var body = "Email: " + email + "\n\nMessage:\n" + message;
+
+      // Create a mailto URL
+      var mailtoLink = "mailto:shahriernobel4@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      // Open the mail client
+      window.location.href = mailtoLink;
+
+      // Clear the form fields
+      emailInput.value = "";
+      messageInput.value = "";
+
+      // Show a success message
+      statusMessage.textContent = "Message sent!";
+    });
+  });
+</script>
+
+                    </section>
+                    <div class="col-md-5 address-container">
+                      <ul class="list-unstyled" style="color: white;">
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </span>
+                          +8801638867318
+                        </li>
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa-at" aria-hidden="true"></i>
+                          </span>
+                          shahriernobel4@gmail.com
+                        </li>
+                        <li>
+                          <span class="fa-icon">
+                            <i class="fa fa fa-map-marker" aria-hidden="true"></i>
+                          </span>
+                          Dhaka, Bangladesh
+                        </li>
+                      </ul>
+                      <h3>Follow me on platforms</h3>
+                      <a href="https://www.facebook.com/shahrier.nobel/" title="" class="fa-icon">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/shahriar-ahmed-278700277/" title="" class="fa-icon">
+                        <i class="fa fa-linkedin"></i>
+                      </a>
+                      <a href="https://www.upwork.com/freelancers/~0179680be45adea7c5?viewMode=1" title="" class="fa-icon" style="margin-bottom: 0%; scale: .7; transform-origin: 2px 40px;">
+                        <img src="assets/images/upworklogo (0;00;00;00).png" >
+                      </a>
+                      <a href="https://www.fiverr.com/shahriernobel/shahriar-ahmed-278700277" title="" class="fa-icon" style="margin-bottom: 0%; scale: .7; transform-origin: 2px 45px;">
+                        <i><img src="assets/images/Fiverr-Logo.png" style="position: relative;"></i>
+                      </a>
+                      <a href="freelancer: https://www.freelancer.com/u/shahriernobel4?page=portfolio" title="" class="fa-icon" style="margin-bottom: 0%; scale: .7; transform-origin: 2px 50px;">
+                        <img src="assets/images/logo_freelancer_com_icon.png">
+                      </a>
+                      
+                        
+                    
+                      
+
+                    </div>
+                  </div>
+                </form>
+            </div>
+
+          </div>
+         
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>Crafted by SHAHRIAR AHMED | <a href="https://www.fiverr.com/shahriernobel/shahriar-ahmed-278700277" title="find on fiverr">Fiverr</a> | <a href="https://www.upwork.com/freelancers/~0179680be45adea7c5?viewMode=1" title="Find on Upwork">Upwork</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  ga('create', 'UA-XXXXX-X', 'auto');
+  ga('send', 'pageview');
+</script>
+
+--> <script type="text/javascript" src="./main.70a66962.js"></script></body>
+
+</html>
