@@ -1,0 +1,24 @@
+upwrk:https://www.upwork.com/freelancers/~0179680be45adea7c5  /OR/ https://www.upwork.com/freelancers/~0179680be45adea7c5?viewMode=1
+linkedin : https://www.linkedin.com/in/shahriar-ahmed-278700277/
+freelancer: https://www.freelancer.com/u/shahriernobel4?page=portfolio
+fiverr:  https://www.fiverr.com/shahriernobel/shahriar-ahmed-278700277
+facebook : https://www.facebook.com/shahrier.nobel/
+
+paste fivr_seller :-
+[<!-- Put this code anywhere in the body of your page where you want the badge to show up. -->
+
+<div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block;'>
+     <a itemprop='url' href=https://www.fiverr.com/shahriernobel rel="nofollow" target="_blank" style='display: inline-block;'>
+        <div class='fiverr-seller-content' id='fiverr-seller-widget-content-7a058f10-ba71-4717-ab11-fd45aefee3e2' itemprop='contentURL' style='display: none;'></div>
+        <div id='fiverr-widget-seller-data' style='display: none;'>
+            <div itemprop='name' >shahriernobel</div>
+            <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
+            <div itemprop='jobtitle'>Seller</div>
+            <div itemprop='description'>[+]professional video editor (with the knowledge of visual effects, motion graphics, element removal or add in video with content aware fill, transitions, effects and animation) for your commercial video, youtube video, short video, podcast, intro or outro, ads, concept based video.
+</div>
+        </div>
+    </a>
+</div>
+
+<script id='fiverr-seller-widget-script-7a058f10-ba71-4717-ab11-fd45aefee3e2' src='https://widgets.fiverr.com/api/v1/seller/shahriernobel?widget_id=7a058f10-ba71-4717-ab11-fd45aefee3e2' data-config='{"category_name":"Graphics \u0026 Design"}' async='true' defer='true'></script>
+]
